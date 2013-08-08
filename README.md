@@ -1,5 +1,5 @@
 # WeatherReport
-***
+
 一款天气类的Web App  
 地址：[http://1.htmldemo.sinaapp.com/demo7/index.php](http://1.htmldemo.sinaapp.com/demo7/index.php)
 

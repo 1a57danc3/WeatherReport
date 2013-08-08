@@ -61,9 +61,10 @@
 		$img4 = combineNum($weatherinfo["img7"]);
 		$img5 = combineNum($weatherinfo["img9"]);
 		$img6 = combineNum($weatherinfo["img11"]);
+		$index_d = $weatherinfo["index_d"];
 		
 		//$query = "insert into weather (cityid, temp1, temp2, temp3, temp4, temp5, temp6, img1, img2, img3, img4, img5, img6) values ('$cityid', '$temp1', '$temp2', '$temp3', '$temp4', '$temp5', '$temp6', '$img1', '$img2', '$img3', '$img4', '$img5', '$img6')";
-		$query = "update weather set temp2 = '$temp2', temp3 = '$temp3', temp4 = '$temp4', temp5 = '$temp5', temp6 = '$temp6', img1 = '$img1', img2 = '$img2', img3 = '$img3', img4 = '$img4', img5 = '$img5', img6 = '$img6' where cityid = '$cityid'";
+		$query = "update weather set temp2 = '$temp2', temp3 = '$temp3', temp4 = '$temp4', temp5 = '$temp5', temp6 = '$temp6', img1 = '$img1', img2 = '$img2', img3 = '$img3', img4 = '$img4', img5 = '$img5', img6 = '$img6', index_d = '$index_d' where cityid = '$cityid'";
 		mysql_query($query);
 	}
 

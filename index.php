@@ -13,6 +13,7 @@
 	$img4 = array();
 	$img5 = array();
 	$img6 = array();
+	$index_d = array();
 	$day = array(); //存放接下来5天的日期
 	
 	for($i = 1; $i <= 5; $i++){
@@ -39,6 +40,8 @@
 		array_push($img4, $row->img4);
 		array_push($img5, $row->img5);
 		array_push($img6, $row->img6);
+
+		array_push($index_d, $row->index_d);
 	}
 	mysql_close($con);
 ?>
@@ -62,9 +65,14 @@
 			<div class="main">
 				<ul class="grid">
 					<li class="span2 li1">
-						<h3>北京</h3>
-						<span class="temp"><?php echo $temp1[0]; ?></span>
-						<span class="icon"><?php echo $img1[0]; ?></span>
+						<div class="top">
+							<h3>北京</h3>
+							<span class="temp"><?php echo $temp1[0]; ?></span>
+							<span class="icon"><?php echo $img1[0]; ?></span>
+						</div>
+						<div class="index_d">	
+						<?php echo $index_d[0]; ?>
+						</div>
 						<div class="overlay">
 							<span class="close">&times;</span>
 							<div class="wrap" id="wrap1">
@@ -102,9 +110,14 @@
 						</div>
 					</li>
 					<li class="span1 li2">
-						<h3>上海</h3>
-						<span class="temp"><?php echo $temp1[1]; ?></span>
-						<span class="icon"><?php echo $img1[1]; ?></span>
+						<div class="top">
+							<h3>上海</h3>
+							<span class="temp"><?php echo $temp1[1]; ?></span>
+							<span class="icon"><?php echo $img1[1]; ?></span>
+						</div>
+						<div class="index_d">	
+						<?php echo $index_d[1]; ?>
+						</div>
 						<div class="overlay">
 							<span class="close">&times;</span>
 							<div class="wrap" id="wrap2">
@@ -142,9 +155,14 @@
 						</div>
 					</li>
 					<li class="span1 li3">
-						<h3>广州</h3>
-						<span class="temp"><?php echo $temp1[2]; ?></span>
-						<span class="icon"><?php echo $img1[2]; ?></span>
+						<div class="top">
+							<h3>广州</h3>
+							<span class="temp"><?php echo $temp1[2]; ?></span>
+							<span class="icon"><?php echo $img1[2]; ?></span>
+						</div>
+						<div class="index_d">	
+						<?php echo $index_d[2]; ?>
+						</div>
 						<div class="overlay">
 							<span class="close">&times;</span>
 							<div class="wrap" id="wrap3">
@@ -182,9 +200,14 @@
 						</div>
 					</li>
 					<li class="span1 li4">
-						<h3>厦门</h3>
-						<span class="temp"><?php echo $temp1[3]; ?></span>
-						<span class="icon"><?php echo $img1[3]; ?></span>
+						<div class="top">
+							<h3>厦门</h3>
+							<span class="temp"><?php echo $temp1[3]; ?></span>
+							<span class="icon"><?php echo $img1[3]; ?></span>
+						</div>
+						<div class="index_d">
+						<?php echo $index_d[3]; ?>
+						</div>
 						<div class="overlay">
 							<span class="close">&times;</span>
 							<div class="wrap" id="wrap4">
@@ -222,9 +245,14 @@
 						</div>
 					</li>
 					<li class="span1 li5">
-						<h3>杭州</h3>
-						<span class="temp"><?php echo $temp1[4]; ?></span>
-						<span class="icon"><?php echo $img1[4]; ?></span>
+						<div class="top">
+							<h3>杭州</h3>
+							<span class="temp"><?php echo $temp1[4]; ?></span>
+							<span class="icon"><?php echo $img1[4]; ?></span>
+						</div>
+						<div class="index_d">	
+						<?php echo $index_d[4]; ?>
+						</div>
 						<div class="overlay">
 							<span class="close">&times;</span>
 							<div class="wrap" id="wrap5">
@@ -262,9 +290,14 @@
 						</div>
 					</li>
 					<li class="span1 li6">
-						<h3>成都</h3>
-						<span class="temp"><?php echo $temp1[5] ?></span>
-						<span class="icon"><?php echo $img1[5]; ?></span>
+						<div class="top">
+							<h3>成都</h3>
+							<span class="temp"><?php echo $temp1[5] ?></span>
+							<span class="icon"><?php echo $img1[5]; ?></span>
+						</div>
+						<div class="index_d">	
+						<?php echo $index_d[5]; ?>
+						</div>
 						<div class="overlay">
 							<span class="close">&times;</span>
 							<div class="wrap" id="wrap6">
@@ -302,9 +335,14 @@
 						</div>
 					</li>
 					<li class="span1 li7">
-						<h3>深圳</h3>
-						<span class="temp"><?php echo $temp1[6]; ?></span>
-						<span class="icon"><?php echo $img1[6]; ?></span>
+						<div class="top">
+							<h3>深圳</h3>
+							<span class="temp"><?php echo $temp1[6]; ?></span>
+							<span class="icon"><?php echo $img1[6]; ?></span>
+						</div>
+						<div class="index_d">	
+						<?php echo $index_d[6]; ?>
+						</div>
 						<div class="overlay">
 							<span class="close">&times;</span>
 							<div class="wrap" id="wrap7">
@@ -342,9 +380,14 @@
 						</div>
 					</li>
 					<li class="span1 li8">
-						<h3>长沙</h3>
-						<span class="temp"><?php echo $temp1[7]; ?></span>
-						<span class="icon"><?php echo $img1[7]; ?></span>
+						<div class="top">
+							<h3>长沙</h3>
+							<span class="temp"><?php echo $temp1[7]; ?></span>
+							<span class="icon"><?php echo $img1[7]; ?></span>
+						</div>
+						<div class="index_d">	
+						<?php echo $index_d[7]; ?>
+						</div>
 						<div class="overlay">
 							<span class="close">&times;</span>
 							<div class="wrap" id="wrap8">
@@ -382,9 +425,14 @@
 						</div>
 					</li>
 					<li class="span2 li9">
-						<h3>西安</h3>
-						<span class="temp"><?php echo $temp1[8]; ?></span>
-						<span class="icon"><?php echo $img1[8]; ?></span>
+						<div class="top">
+							<h3>西安</h3>
+							<span class="temp"><?php echo $temp1[8]; ?></span>
+							<span class="icon"><?php echo $img1[8]; ?></span>
+						</div>
+						<div class="index_d">	
+						<?php echo $index_d[8]; ?>
+						</div>
 						<div class="overlay">
 							<span class="close">&times;</span>
 							<div class="wrap" id="wrap9">
@@ -422,9 +470,14 @@
 						</div>
 					</li>
 					<li class="span1 li10">
-						<h3>哈尔滨</h3>
-						<span class="temp"><?php echo $temp1[9]; ?></span>
-						<span class="icon"><?php echo $img1[9]; ?></span>
+						<div class="top">
+							<h3>哈尔滨</h3>
+							<span class="temp"><?php echo $temp1[9]; ?></span>
+							<span class="icon"><?php echo $img1[9]; ?></span>
+						</div>
+						<div class="index_d">	
+						<?php echo $index_d[9]; ?>
+						</div>
 						<div class="overlay">
 							<span class="close">&times;</span>
 							<div class="wrap" id="wrap10">
@@ -462,9 +515,14 @@
 						</div>
 					</li>
 					<li class="span1 li11">
-						<h3>天津</h3>
-						<span class="temp"><?php echo $temp1[10]; ?></span>
-						<span class="icon"><?php echo $img1[10]; ?></span>
+						<div class="top">
+							<h3>天津</h3>
+							<span class="temp"><?php echo $temp1[10]; ?></span>
+							<span class="icon"><?php echo $img1[10]; ?></span>
+						</div>
+						<div class="index_d">	
+						<?php echo $index_d[10]; ?>
+						</div>
 						<div class="overlay">
 							<span class="close">&times;</span>
 							<div class="wrap" id="wrap11">
@@ -502,9 +560,14 @@
 						</div>
 					</li>
 					<li class="span1 li12">
-						<h3>重庆</h3>
-						<span class="temp"><?php echo $temp1[11]; ?></span>
-						<span class="icon"><?php echo $img1[11]; ?></span>
+						<div class="top">
+							<h3>重庆</h3>
+							<span class="temp"><?php echo $temp1[11]; ?></span>
+							<span class="icon"><?php echo $img1[11]; ?></span>
+						</div>
+						<div class="index_d">	
+						<?php echo $index_d[11]; ?>
+						</div>
 						<div class="overlay">
 							<span class="close">&times;</span>
 							<div class="wrap"  id="wrap12">
@@ -542,9 +605,14 @@
 						</div>
 					</li>
 					<li class="span2 li13">
-						<h3>济南</h3>
-						<span class="temp"><?php echo $temp1[12]; ?></span>
-						<span class="icon"><?php echo $img1[12]; ?></span>
+						<div class="top">
+							<h3>济南</h3>
+							<span class="temp"><?php echo $temp1[12]; ?></span>
+							<span class="icon"><?php echo $img1[12]; ?></span>
+						</div>
+						<div class="index_d">	
+						<?php echo $index_d[12]; ?>
+						</div>
 						<div class="overlay">
 							<span class="close">&times;</span>
 							<div class="wrap" id="wrap13">
@@ -616,6 +684,7 @@
 			var runIt = function(){
 					callback.apply(context);
 				};
+				
 			return (function(){
 				//延时响应resize，防止执行两次
 				window.clearTimeout(timeout);
@@ -673,6 +742,31 @@
 					flag = 0;
 				});
 			});	
+
+			//鼠标移入移出动画
+			$(".grid > li").mouseover(function() {
+				var width = "-" + $(this).width() + "px";
+
+				$(this).find(".top").animate({
+					"left": width
+				}, 450);
+
+				$(this).find(".index_d").animate({
+					"left": "0",
+					"opacity": "1"
+				}, 450);
+			});
+
+			$(".grid > li").mouseleave(function() {
+				$(this).find(".top").animate({
+					"left": "0"
+				}, 450);
+
+				$(this).find(".index_d").animate({
+					"left": "100%",
+					"opacity": "0"
+				}, 450);
+			});
 
 			//延时响应resize，以防触发两次
 			window.onresize = debounce(resizeCallback, 300);
