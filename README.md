@@ -4,7 +4,7 @@
 地址：[http://1.htmldemo.sinaapp.com/demo7/index.php](http://1.htmldemo.sinaapp.com/demo7/index.php)
 
 ## 说明
-***
+
 天气数据来自中国国家气象局提供的天气预报接口  
 
 接口地址：[http://m.weather.com.cn/data/101010100.html](http://m.weather.com.cn/data/101010100.html)   
@@ -196,7 +196,10 @@
 台北, 高雄  
     `101340102`,`101340201`  
 
+>补充：实时温度接口地址  [http://www.weather.com.cn/data/sk/101010100.html](http://www.weather.com.cn/data/sk/101010100.html "http://www.weather.com.cn/data/sk/101010100.html")
+
 ## 历史记录  
-***
+###2013.8.8  
+加入了实时温度
 ### 2013.8.7  
 加入了动画效果

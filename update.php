@@ -15,6 +15,11 @@
 			return $num;
 		}
 	}
+
+	function rewriteTemp($temp) {
+		$temp = str_replace("℃", "", $temp);
+		return $temp."°C";
+	}
 	
 	$cityidArray = array(
 		"101010100", /*beijing*/
@@ -27,9 +32,9 @@
 		"101250101", /*changsha*/
 		"101110101", /*xian*/
 		"101050101", /*haerbing*/
-		"101320101", /*xianggang*/
-		"101330101", /*aomen*/
-		"101340102" /*taibei*/
+		"101030100", /*tianjing*/
+		"101040100", /*chongqing*/
+		"101120101" /*jinan*/
 	);
 	
 	$con = mysql_connect(SAE_MYSQL_HOST_M.':'.SAE_MYSQL_PORT,SAE_MYSQL_USER,SAE_MYSQL_PASS);
@@ -45,12 +50,11 @@
 	
 		$weatherinfo = $data["weatherinfo"];
 		$cityid = $weatherinfo["cityid"];
-		$temp1 = $weatherinfo["temp1"];
-		$temp2 = $weatherinfo["temp2"];
-		$temp3 = $weatherinfo["temp3"];
-		$temp4 = $weatherinfo["temp4"];
-		$temp5 = $weatherinfo["temp5"];
-		$temp6 = $weatherinfo["temp6"];
+		$temp2 = rewriteTemp($weatherinfo["temp2"]);
+		$temp3 = rewriteTemp($weatherinfo["temp3"]);
+		$temp4 = rewriteTemp($weatherinfo["temp4"]);
+		$temp5 = rewriteTemp($weatherinfo["temp5"]);
+		$temp6 = rewriteTemp($weatherinfo["temp6"]);
 		$img1 = combineNum($weatherinfo["img1"]);
 		$img2 = combineNum($weatherinfo["img3"]);
 		$img3 = combineNum($weatherinfo["img5"]);
@@ -59,7 +63,7 @@
 		$img6 = combineNum($weatherinfo["img11"]);
 		
 		//$query = "insert into weather (cityid, temp1, temp2, temp3, temp4, temp5, temp6, img1, img2, img3, img4, img5, img6) values ('$cityid', '$temp1', '$temp2', '$temp3', '$temp4', '$temp5', '$temp6', '$img1', '$img2', '$img3', '$img4', '$img5', '$img6')";
-		$query = "update weather set temp1 = '$temp1', temp2 = '$temp2', temp3 = '$temp3', temp4 = '$temp4', temp5 = '$temp5', temp6 = '$temp6', img1 = '$img1', img2 = '$img2', img3 = '$img3', img4 = '$img4', img5 = '$img5', img6 = '$img6' where cityid = '$cityid' ";
+		$query = "update weather set temp2 = '$temp2', temp3 = '$temp3', temp4 = '$temp4', temp5 = '$temp5', temp6 = '$temp6', img1 = '$img1', img2 = '$img2', img3 = '$img3', img4 = '$img4', img5 = '$img5', img6 = '$img6' where cityid = '$cityid'";
 		mysql_query($query);
 	}
 

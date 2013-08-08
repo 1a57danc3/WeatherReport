@@ -22,7 +22,7 @@
 	
 	$con = mysql_connect(SAE_MYSQL_HOST_M.':'.SAE_MYSQL_PORT,SAE_MYSQL_USER,SAE_MYSQL_PASS);
 	mysql_select_db(SAE_MYSQL_DB, $con);
-	$query = "select * from weather";
+	$query = "select * from weather order by id asc";
 	$result = mysql_query($query, $con);
 	
 	while ($row = mysql_fetch_object($result)) {
@@ -462,14 +462,14 @@
 						</div>
 					</li>
 					<li class="span1 li11">
-						<h3>香港</h3>
+						<h3>天津</h3>
 						<span class="temp"><?php echo $temp1[10]; ?></span>
 						<span class="icon"><?php echo $img1[10]; ?></span>
 						<div class="overlay">
 							<span class="close">&times;</span>
 							<div class="wrap" id="wrap11">
 								<div class="today_weather div1">
-									<span class="city">香港</span>
+									<span class="city">天津</span>
 									<span class="icon"><?php echo $img1[10]; ?></span>
 									<span class="overlay-temp"><?php echo $temp1[10]; ?></span>
 								</div>
@@ -502,14 +502,14 @@
 						</div>
 					</li>
 					<li class="span1 li12">
-						<h3>澳门</h3>
+						<h3>重庆</h3>
 						<span class="temp"><?php echo $temp1[11]; ?></span>
 						<span class="icon"><?php echo $img1[11]; ?></span>
 						<div class="overlay">
 							<span class="close">&times;</span>
 							<div class="wrap"  id="wrap12">
 								<div class="today_weather div1">
-									<span class="city">澳门</span>
+									<span class="city">重庆</span>
 									<span class="icon"><?php echo $img1[11]; ?></span>
 									<span class="overlay-temp"><?php echo $temp1[11]; ?></span>
 								</div>
@@ -542,14 +542,14 @@
 						</div>
 					</li>
 					<li class="span2 li13">
-						<h3>台北</h3>
+						<h3>济南</h3>
 						<span class="temp"><?php echo $temp1[12]; ?></span>
 						<span class="icon"><?php echo $img1[12]; ?></span>
 						<div class="overlay">
 							<span class="close">&times;</span>
 							<div class="wrap" id="wrap13">
 								<div class="today_weather div1">
-									<span class="city">台北</span>
+									<span class="city">济南</span>
 									<span class="icon"><?php echo $img1[12]; ?></span>
 									<span class="overlay-temp"><?php echo $temp1[12]; ?></span>
 								</div>
